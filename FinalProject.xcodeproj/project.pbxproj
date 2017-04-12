@@ -9,14 +9,26 @@
 /* Begin PBXBuildFile section */
 		E274F2221E9C055F00799255 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E274F2211E9C055F00799255 /* main.cpp */; };
 		E274F2331E9C058600799255 /* MovingSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E274F2311E9C058600799255 /* MovingSprite.cpp */; };
+		E274F2361E9C23BD00799255 /* red_laser.png in Resources */ = {isa = PBXBuildFile; fileRef = E274F2351E9C23BD00799255 /* red_laser.png */; };
+		E274F2381E9C23D200799255 /* blue_laser.png in Resources */ = {isa = PBXBuildFile; fileRef = E274F2371E9C23D200799255 /* blue_laser.png */; };
+		E274F23A1E9C386A00799255 /* explosion.png in Resources */ = {isa = PBXBuildFile; fileRef = E274F2391E9C386A00799255 /* explosion.png */; };
+		E274F23D1E9C4A4200799255 /* otherExplosion.png in Resources */ = {isa = PBXBuildFile; fileRef = E274F23C1E9C4A4200799255 /* otherExplosion.png */; };
+		E274F2401E9CBCCD00799255 /* MainFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E274F23E1E9CBCCD00799255 /* MainFunctions.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E274F2191E9C055F00799255 /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E274F21D1E9C055F00799255 /* FinalProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FinalProject-Info.plist"; sourceTree = "<group>"; };
-		E274F2211E9C055F00799255 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E274F2211E9C055F00799255 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; usesTabs = 1; };
 		E274F2311E9C058600799255 /* MovingSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MovingSprite.cpp; sourceTree = "<group>"; };
 		E274F2321E9C058600799255 /* MovingSprite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MovingSprite.hpp; sourceTree = "<group>"; };
+		E274F2351E9C23BD00799255 /* red_laser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_laser.png; sourceTree = "<group>"; };
+		E274F2371E9C23D200799255 /* blue_laser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_laser.png; sourceTree = "<group>"; };
+		E274F2391E9C386A00799255 /* explosion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explosion.png; sourceTree = "<group>"; };
+		E274F23B1E9C3B3900799255 /* Battlestar.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = Battlestar.TTF; sourceTree = "<group>"; };
+		E274F23C1E9C4A4200799255 /* otherExplosion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = otherExplosion.png; sourceTree = "<group>"; };
+		E274F23E1E9CBCCD00799255 /* MainFunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainFunctions.cpp; sourceTree = "<group>"; };
+		E274F23F1E9CBCCD00799255 /* MainFunctions.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MainFunctions.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +80,11 @@
 		E274F2231E9C055F00799255 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E274F23B1E9C3B3900799255 /* Battlestar.TTF */,
+				E274F23C1E9C4A4200799255 /* otherExplosion.png */,
+				E274F2391E9C386A00799255 /* explosion.png */,
+				E274F2351E9C23BD00799255 /* red_laser.png */,
+				E274F2371E9C23D200799255 /* blue_laser.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -77,6 +94,8 @@
 			children = (
 				E274F2311E9C058600799255 /* MovingSprite.cpp */,
 				E274F2321E9C058600799255 /* MovingSprite.hpp */,
+				E274F23E1E9CBCCD00799255 /* MainFunctions.cpp */,
+				E274F23F1E9CBCCD00799255 /* MainFunctions.hpp */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -139,6 +158,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E274F23D1E9C4A4200799255 /* otherExplosion.png in Resources */,
+				E274F23A1E9C386A00799255 /* explosion.png in Resources */,
+				E274F2361E9C23BD00799255 /* red_laser.png in Resources */,
+				E274F2381E9C23D200799255 /* blue_laser.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E274F2221E9C055F00799255 /* main.cpp in Sources */,
+				E274F2401E9CBCCD00799255 /* MainFunctions.cpp in Sources */,
 				E274F2331E9C058600799255 /* MovingSprite.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
