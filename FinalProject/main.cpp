@@ -6,7 +6,7 @@
  
  compile with: g++ *.cpp -o spacewar -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio -std=c++11 -g
  
- run with: ./spacewar
+ run with: ./spacewar 
  
  */
 
