@@ -17,28 +17,38 @@
 
 #define DEFAULT_COORD 100
 
-class MovingSprite {
-public:
-    
-    //variables
-    sf::Sprite * sprite;
-    sf::Texture texture;
-    int xcoord;
-    int ycoord;
-    bool movingRight;
-    
-    //functions
-    MovingSprite(std::string texturepath, float scale){
-        sprite = new sf::Sprite(); // Instantiate sprite
-        if (!texture.loadFromFile(texturepath)){ // load texture
-            std::cout << "Could not load texture" << std::endl;
-        }
-        texture.setSmooth(true); //anti-aliasing
-        sprite->setTexture(texture);
-        sprite->setScale(scale, scale); //make smaller
-        
-        xcoord = DEFAULT_COORD;
-        ycoord = DEFAULT_COORD;
-        movingRight = true;
-    }
-};
+MovingSprite::MovingSprite(std::string texturepath, float scale, std::string laserpath, float laserscale, std::string name){
+	
+	//sprite
+	sprite = new sf::Sprite(); // Instantiate
+	if (!texture.loadFromFile(texturepath)){ // load texture
+		std::cout << "Could not load sprite texture" << std::endl;
+	}
+	texture.setSmooth(true); //anti-aliasing
+	sprite->setTexture(texture);
+	sprite->setScale(scale, scale); //make smaller
+	
+	xcoord = DEFAULT_COORD;
+	ycoord = DEFAULT_COORD;
+	
+	// laser beam
+	laser = new sf::Sprite(); // Instantiate
+	if (!laserTexture.loadFromFile(laserpath)){ // load texture
+		std::cout << "Could not load laser texture" << std::endl;
+	}
+	laserTexture.setSmooth(true); //anti-aliasing
+	laser->setTexture(laserTexture);
+	laser->setScale(laserscale, laserscale); //make smaller
+	laserActive = false;
+	
+	hits = 0;
+	points = 0;
+	
+	playerName = name;
+}
+
+void MovingSprite::shoot(int current_xcoord, int current_ycoord){
+	laserX = current_xcoord;
+	laserY = current_ycoord;
+	laserActive = true;
+}
