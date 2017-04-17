@@ -75,7 +75,8 @@ int main(int, char const**) {
         
         // check for player input
         checkArrowInput(spaceship);
-        checkWASDInput(alien);
+		//checkWASDInput(alien);
+		checkJoystickInput(alien);
         
         // move players accordingly
 		alien->sprite->setPosition(alien->xcoord, alien->ycoord);

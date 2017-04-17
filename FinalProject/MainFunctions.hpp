@@ -68,7 +68,7 @@ bool collision(sf::Sprite * player, sf::Sprite * enemy);
 void updateLaser(MovingSprite * player, bool goingUp);
 
 // set up the window, music and icon
-void initialSetup(sf::RenderWindow * window, sf::Music * music, sf::Image * icon, sf::Font * font, sf::Text * scoreboard);
+int initialSetup(sf::RenderWindow * window, sf::Music * music, sf::Image * icon, sf::Font * font, sf::Text * scoreboard);
 
 // draws a player and his laser's explosion, if it has collided
 void drawPlayer(MovingSprite * player, MovingSprite * opponent, sf::RenderWindow * window, sf::Sprite * explosion);

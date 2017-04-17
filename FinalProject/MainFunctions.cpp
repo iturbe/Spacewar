@@ -121,7 +121,7 @@ void updateLaser(MovingSprite * player, bool goingUp){
 }
 
 // set up the window, music and icon
-void initialSetup(sf::RenderWindow * window, sf::Music * music, sf::Image * icon, sf::Font * font, sf::Text * scoreboard){
+int initialSetup(sf::RenderWindow * window, sf::Music * music, sf::Image * icon, sf::Font * font, sf::Text * scoreboard){
 	//set framerate limit
 	window->setFramerateLimit(60);
 	
