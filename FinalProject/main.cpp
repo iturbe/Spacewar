@@ -24,8 +24,6 @@ int main(int, char const**) {
 	sf::Text * scoreboard = new sf::Text();
     initialSetup(window, music, icon, font, scoreboard);
     
-    window->setFramerateLimit(60);
-    
     // Set up alien
     MovingSprite * alien = new MovingSprite("invader.png", 0.2, "red_laser.png", 0.2, "Deez");
     
@@ -81,6 +79,10 @@ int main(int, char const**) {
         // move players accordingly
 		alien->sprite->setPosition(alien->xcoord, alien->ycoord);
         spaceship->sprite->setPosition(spaceship->xcoord, spaceship->ycoord);
+		
+		
+		
+		
 		
         // DRAW LOOP
         window->draw(background);

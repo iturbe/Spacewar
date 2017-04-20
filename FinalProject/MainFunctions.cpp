@@ -40,9 +40,10 @@ void checkWASDInput(MovingSprite * sprite){
 		sprite->xcoord += PLAYER_SPEED;
 	} else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)){
 		sprite->xcoord -= PLAYER_SPEED;
-		
-		//check for laser shot (as long as there's not one already being fired)
-	} else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Tab) && !sprite->laserActive) {
+	}
+	
+	//check for laser shot (as long as there's not one already being fired)
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Tab) && !sprite->laserActive) {
 		sprite->shoot(sprite->xcoord+(sprite->sprite->getGlobalBounds().width)*2/5, sprite->ycoord);
 	}
 	
@@ -60,9 +61,10 @@ void checkArrowInput(MovingSprite * sprite){
 		sprite->xcoord += PLAYER_SPEED;
 	} else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
 		sprite->xcoord -= PLAYER_SPEED;
-		
-		//check for laser shot (as long as there's not one already being fired)
-	} else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && !sprite->laserActive) {
+	}
+	
+	//check for laser shot (as long as there's not one already being fired)
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && !sprite->laserActive) {
 		sprite->shoot(sprite->xcoord+(sprite->sprite->getGlobalBounds().width)*2/5, sprite->ycoord);
 	}
 	
@@ -147,7 +149,6 @@ int initialSetup(sf::RenderWindow * window, sf::Music * music, sf::Image * icon,
 	
 	scoreboard->setString("P1 0 - 0 P2");
 	scoreboard->setFont(*font);
-	scoreboard->setFillColor(sf::Color::White);
 	scoreboard->setPosition(500, 500);
 	
 }
